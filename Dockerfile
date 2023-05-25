@@ -1,3 +1,4 @@
+# 后续, 记得golang最好不要使用最新版本, 晚一个版本有利于生态展开
 FROM golang:1.20.4-alpine
 
 # The latest alpine images don't have some tools like (`git` and `bash`).

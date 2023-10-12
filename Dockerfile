@@ -1,6 +1,6 @@
 # 后续, 记得golang最好不要使用最新版本, 晚一个版本有利于生态展开
 # 执行./build.image.sh打包并上传本镜像
-FROM golang:1.20.8-alpine
+FROM golang:1.21.3-alpine
 
 # The latest alpine images don't have some tools like (`git` and `bash`).
 # Adding git, bash and openssh to the image

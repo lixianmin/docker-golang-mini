@@ -1,8 +1,8 @@
-# 后续, 记得golang最好不要使用最新版本, 晚一个版本有利于生态展开
+# 后续, 记得golang最好不要使用最新版本, 晚一个大版本有利于生态展开
 # 执行./build.image.sh打包并上传本镜像
 
 # 升级为1.22, 以支持for loop中的变量
-FROM golang:1.22.2-alpine
+FROM golang:1.22.4-alpine
 
 # The latest alpine images don't have some tools like (`git` and `bash`).
 # Adding git, bash and openssh to the image

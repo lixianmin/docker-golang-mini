@@ -4,10 +4,13 @@
 # 升级为1.22, 以支持for loop中的变量
 FROM golang:1.22.6-alpine
 
-# The latest alpine images don't have some tools like (`git` and `bash`).
-# Adding git, bash and openssh to the image
+# The alpine images don't have some tools like (`vim` and `bash`).
+#
+# remove: build-base (gcc, g++, make)
+# remove: gcc
+# remove: git
 RUN apk update && apk upgrade && \
-    apk add --no-cache bash build-base busybox-extras curl gcc git tzdata vim
+    apk add --no-cache bash busybox-extras curl tzdata vim
 
 # 修改时区为东8区，参考链接：https://game404.github.io/post/docker-timezone/
 ENV TZ=Asia/Shanghai

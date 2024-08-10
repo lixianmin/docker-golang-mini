@@ -8,9 +8,9 @@ FROM golang:1.22.6-alpine
 #
 # remove: build-base (gcc, g++, make)
 # remove: gcc
-# remove: git
+# add: git 打包时需要通过git命令提取项目名和当前提交的版本等信息
 RUN apk update && apk upgrade && \
-    apk add --no-cache bash busybox-extras curl tzdata vim
+    apk add --no-cache bash busybox-extras curl git tzdata vim
 
 # 修改时区为东8区，参考链接：https://game404.github.io/post/docker-timezone/
 ENV TZ=Asia/Shanghai

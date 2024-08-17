@@ -2,7 +2,8 @@
 
 
 
-现在这个是需要自己build完成后自己上传到docker hub了
+1. 需要自己build完成后主动上传到docker hub
+2. 仅仅作用golang项目的运行时，打包请使用docker-golang-build项目
 
 
 

@@ -1,3 +1,5 @@
+set -ex
+
 docker build --platform linux/amd64 -t lixianmin/golang-mini:latest .
 
 # if returns: denied: requested access to the resource is denied

@@ -2,9 +2,11 @@
 FROM alpine:latest
 
 # The alpine images don't have some tools like (`vim` and `bash`).
-# add: git 打包时需要通过git命令提取项目名和当前提交的版本等信息
 RUN apk update && apk upgrade && \
-    apk add --no-cache bash busybox-extras curl tzdata vim
+    apk add --no-cache bash busybox-extras curl tzdata vim-full && \
+    rm -rf /var/cache/apk/*
+
+RUN echo "set number" >> /etc/vim/vimrc
 
 # 修改时区为东8区，参考链接：https://game404.github.io/post/docker-timezone/
 ENV TZ=Asia/Shanghai

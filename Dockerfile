@@ -15,10 +15,11 @@ RUN rm /usr/bin/vi
 RUN ln -s /usr/bin/vim /usr/bin/vi
 
 # init .vimrc
-RUN echo "set nu" > /root/.vimrc
-RUN echo "set nocompatible" >> /root/.vimrc
-RUN echo "set tabstop=4" >> /root/.vimrc
 RUN echo "set expandtab" >> /root/.vimrc
+RUN echo "set hlsearch" >> /root/.vimrc
+RUN echo "set nocompatible" >> /root/.vimrc
+RUN echo "set nu" > /root/.vimrc
+RUN echo "set tabstop=4" >> /root/.vimrc
 RUN echo "syntax on" >> /root/.vimrc
 
 # 修改时区为东8区，参考链接：https://game404.github.io/post/docker-timezone/

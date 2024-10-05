@@ -17,8 +17,10 @@ RUN ln -s /usr/bin/vim /usr/bin/vi
 # init .vimrc
 RUN echo "set expandtab" >> /root/.vimrc
 RUN echo "set hlsearch" >> /root/.vimrc
+RUN echo "set ignorecase" >> /root/.vimrc
 RUN echo "set nocompatible" >> /root/.vimrc
 RUN echo "set nu" > /root/.vimrc
+RUN echo "set smartcase" >> /root/.vimrc
 RUN echo "set tabstop=4" >> /root/.vimrc
 RUN echo "syntax on" >> /root/.vimrc
 
